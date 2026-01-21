@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /admin.html
+Disallow: /Bxodandreg.html
+Disallow: /profile.html
+Disallow: /cart.html
+Disallow: /check.html
+
+Sitemap: https://kiving24.github.io/Maison.github.io/sitemap.xml
+Host: kiving24.github.io/Maison.github.io
