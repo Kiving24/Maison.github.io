@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <title>Каталог товаров — Maison Europa</title>
+    <meta
+      name="description"
+      content="Откройте каталог премиальных европейских продуктов Maison Europa: вина, сыры, мясо и бакалея. Ищите товары и фильтруйте по категориям."
+    />
+    <link rel="stylesheet" href="css/katalog.css" />
+    <link rel="stylesheet" href="css/global.css">
+  </head>
+  <body>
+  
+    <div class="bg-decor">
+      <div class="circle circle-amber"></div>
+      <div class="circle circle-red"></div>
+      <div class="circle circle-cyan"></div>
+    </div>
+
+  
+    <header class="site-header" id="siteHeader">
+      <div class="container header-wrapper">
+     
+        <a href="index.html" class="logo">
+          <h1>Maison Europa</h1>
+          <span class="logo-underline"></span>
+        </a>
+     
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link">Главная</a>
+          <a href="katalog.html" class="nav-link active">Каталог</a>
+          <a href="sup.html" class="nav-link">Поддержка</a>
+          <a href="info.html" class="nav-link">Информация</a>
+        </nav>
+       
+        <div class="header-actions">
+          <a href="cart.html" class="icon-btn" aria-label="Корзина">
+           
+            <svg class="icon" viewBox="-5 -3 35 27" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="8" cy="21" r="1"></circle>
+              <circle cx="19" cy="21" r="1"></circle>
+              <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+            </svg>
+          </a>
+          <a href="Bxodandreg.html" class="btn btn-login">
+         
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            <span>Вход</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+   
+      <section class="catalog">
+        <div class="container">
+          <div class="catalog-wrapper">
+           
+            <aside class="filters" id="filterPanel">
+             
+              <button class="filter-close" id="filterCloseBtn" aria-label="Закрыть фильтры">
+              
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </button>
+            
+              <div class="filter-group">
+                <label for="searchInput" class="filter-label">Поиск</label>
+                <div class="search-wrapper">
+                 
+                  <svg class="icon search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  </svg>
+                  <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Найти товар..."
+                    class="filter-input"
+                  />
+                </div>
+              </div>
+            
+              <div class="filter-group">
+                <h3 class="filter-label">Категории</h3>
+                <div id="categoryList" class="category-list">
+                
+                </div>
+              </div>
+              
+              <div class="info-card">
+                <span class="info-icon" aria-hidden="true">
+                  
+                  <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                    <path d="M15 18H9" />
+                    <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                    <circle cx="17" cy="18" r="2" />
+                    <circle cx="7" cy="18" r="2" />
+                  </svg>
+                </span>
+                <span>Бесплатная доставка от&nbsp;5000&nbsp;₽</span>
+              </div>
+            </aside>
+           
+            <div class="catalog-content">
+              
+              <button class="filter-toggle" id="filterToggleBtn">
+               
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="4" y1="4" x2="20" y2="4" />
+                  <line x1="6" y1="8" x2="18" y2="8" />
+                  <line x1="8" y1="12" x2="16" y2="12" />
+                  <line x1="10" y1="16" x2="14" y2="16" />
+                </svg>
+                <span>Фильтры и поиск</span>
+              </button>
+             
+              <div id="productGrid" class="product-grid"></div>
+              
+              <div id="noProducts" class="no-products hidden">
+                <div class="no-icon">🔍</div>
+                <h3>Товары не найдены</h3>
+                <p>Попробуйте изменить фильтры или поисковый запрос</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+   
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div class="footer-col company">
+          <h3>Maison Europa</h3>
+          <span class="logo-underline"></span>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+            consectetur sit cupiditate libero magnam suscipit, qui aliquid quod?
+            Ea cum minima suscipit possimus.
+          </p>
+        </div>
+        <div class="footer-col nav">
+          <h4>Навигация</h4>
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="katalog.html">Каталог</a></li>
+            <li><a href="sup.html">Поддержка</a></li>
+            <li><a href="info.html">Информация</a></li>
+            <li><a href="Bxodandreg.html">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Доставка</a></li>
+          </ul>
+        </div>
+        <div class="footer-col contacts">
+          <h4>Контакты</h4>
+          <a href="mailto:Maisoneuropa@gmail.com" class="contact-link">
+            <div class="icon-box gradient-amber">
+              
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+              </svg>
+            </div>
+            <span>Maisoneuropa@gmail.com</span>
+          </a>
+          <p class="social-title">Мы в соцсетях</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <img src="img/instagram.png" alt="Instagram" />
+            </a>
+            <a href="#" class="social-link" aria-label="Facebook">
+              <img src="img/facebook.png" alt="Instagram" />
+            </a>
+            <a href="#" class="social-link" aria-label="Telegram">
+              <img src="img/telegram.png" alt="Instagram" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© 2025 Maison Europa. Все права защищены.</p>
+        <div class="legal-links">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Условия использования</a>
+        </div>
+      </div>
+    </footer>
+
+    
+    <nav class="mobile-nav">
+      <div class="mobile-nav-inner">
+        <a href="index.html" class="mobile-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+            <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          </svg>
+          <span>Главная</span>
+        </a>
+        <a href="katalog.html" class="mobile-item active">
+         
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+            <path d="M3.103 6.034h17.794"></path>
+            <path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path>
+          </svg>
+          <span>Каталог</span>
+        </a>
+        <a href="sup.html" class="mobile-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <path d="M9.09 9a3 3 0 1 1 5.83 1c0 2-3 3-3 3" />
+            <path d="M12 17h.01" />
+          </svg>
+          <span>Поддержка</span>
+        </a>
+        <a href="cart.html" class="mobile-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1" />
+            <circle cx="19" cy="21" r="1" />
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+          </svg>
+          <span>Корзина</span>
+        </a>
+        <a href="Bxodandreg.html" class="mobile-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <span>Вход</span>
+        </a>
+      </div>
+    </nav>
+    <script src="js/katalog.js"></script>
+  </body>
+</html>

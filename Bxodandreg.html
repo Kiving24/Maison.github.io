@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вход или регистрация — Maison Europa</title>
+    <meta
+      name="description"
+      content="Страница входа и регистрации интернет‑магазина Maison Europa. Создайте аккаунт или войдите, чтобы получить доступ к каталогу европейских деликатесов."/>
+  
+    <link rel="stylesheet" href="css/Bxodandreg.css" />
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <body>
+    <div class="bg-decor">
+      <div class="circle circle-amber"></div>
+      <div class="circle circle-red"></div>
+      <div class="circle circle-cyan"></div>
+    </div>
+
+
+    <main class="auth-container">
+      <div class="logo" id="logo">
+        <h1>Maison Europa</h1>
+        <div class="underline"></div>
+      </div>
+
+      <div class="auth-card">
+        <div class="badge">
+          <svg class="icon small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
+            <path d="M20 2v4"></path>
+            <path d="M22 4h-4"></path>
+            <circle cx="4" cy="20" r="2"></circle>
+          </svg>
+          <span>Добро&nbsp;пожаловать</span>
+        </div>
+
+        <div class="toggle">
+          <button id="loginToggle" class="toggle-btn active">Вход</button>
+          <button id="registerToggle" class="toggle-btn">Регистрация</button>
+        </div>
+
+        <form id="authForm" class="form">
+          <div class="form-group hidden" id="nameGroup">
+            <label for="name">Имя</label>
+            <div class="input-wrapper">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+              <input type="text" id="name" placeholder="Ваше имя" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-wrapper">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              </svg>
+              <input type="email" id="email" placeholder="exemple@email.com" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Пароль</label>
+            <div class="input-wrapper">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="11" x="3" y="11" rx="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <input type="password" id="password" placeholder="••••••••" />
+            </div>
+          </div>
+
+  
+          <div class="forgot" id="forgotPassword">
+            <a href="#">Забыли пароль?</a>
+          </div>
+
+      
+          <div class="terms hidden" id="termsGroup">
+            <input type="checkbox" id="terms" />
+            <label for="terms">Я согласен с <a href="#">условиями использования</a> и <a href="#">политикой конфиденциальности</a></label>
+          </div>
+
+        
+            <button type="submit" class="submit-btn">
+              <a href="profile.html"><span class="btn-text">Войти</span>
+            <div class="overlay"></div></a>
+            
+          </button>
+         
+        </form>
+
+       
+        <div class="divider">
+          <span>или</span>
+        </div>
+
+       
+        <div class="social">
+          <button class="social-btn">
+            <div class="g-logo"></div>
+            <span>Продолжить с Google</span>
+          </button>
+        </div>
+
+      
+        <div class="switch">
+          <p>
+            <span id="switchText">Нет аккаунта?</span>
+            <button id="switchBtn">Зарегистрироваться</button>
+          </p>
+        </div>
+      </div>
+
+    
+      <div class="info">
+        <p>Вход подразумевает согласие с нашими правилами</p>
+      </div>
+    </main>
+<script src="js/Bxodandreg.js"></script>
+  </body>
+</html>

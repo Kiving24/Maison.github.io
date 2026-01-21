@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Админпанель — Maison Europa</title>
+    <meta
+      name="description"
+      content="Администраторская панель Maison Europa. Здесь можно просматривать
+               статистику, управлять товарами, заказами и пользователями."
+    />
+    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <body>
+    <div class="bg-decor">
+      <div class="circle circle-amber"></div>
+      <div class="circle circle-red"></div>
+      <div class="circle circle-cyan"></div>
+    </div>
+
+    <header class="admin-header" id="siteHeader">
+      <div class="container header-wrapper">
+
+        <a href="index.html" class="logo">
+          <h1>Maison Europa</h1>
+          <span class="logo-underline"></span>
+        </a>
+
+        <h2 class="panel-title">Административная панель</h2>
+
+        <a href="Bxodandreg.html" class="btn btn-login">Выйти</a>
+      </div>
+    </header>
+
+    <div class="admin-wrapper">
+ 
+      <nav class="admin-nav" id="adminNav">
+        <ul>
+          <li class="nav-item active" data-target="dashboard">
+            <span class="nav-icon gradient-amber">
+          
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+                <circle cx="12" cy="8" r="6" />
+              </svg>
+            </span>
+            <span class="nav-text">Дашборд</span>
+          </li>
+          <li class="nav-item" data-target="products">
+            <span class="nav-icon gradient-red">
+          
+              <svg class="icon" viewBox="-5 -3 35 27" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="8" cy="21" r="1" />
+                <circle cx="19" cy="21" r="1" />
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+              </svg>
+            </span>
+            <span class="nav-text">Товары</span>
+          </li>
+          <li class="nav-item" data-target="orders">
+            <span class="nav-icon gradient-blue">
+          
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 6v6l4 2" />
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+            </span>
+            <span class="nav-text">Заказы</span>
+          </li>
+          <li class="nav-item" data-target="users">
+            <span class="nav-icon gradient-purple">
+          
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </span>
+            <span class="nav-text">Пользователи</span>
+          </li>
+        </ul>
+      </nav>
+
+   
+      <main class="admin-content">
+        
+        <section id="dashboard" class="admin-section active">
+          <h3>Обзор</h3>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon gradient-red">
+          
+                <svg class="icon" viewBox="-5 -3 35 27" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="8" cy="21" r="1" />
+                  <circle cx="19" cy="21" r="1" />
+                  <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+                </svg>
+              </div>
+              <div class="stat-content">
+                <span class="stat-number">312</span>
+                <span class="stat-label">Товара</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon gradient-blue">
+            
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 6v6l4 2" />
+                  <circle cx="12" cy="12" r="10" />
+                </svg>
+              </div>
+              <div class="stat-content">
+                <span class="stat-number">1 024</span>
+                <span class="stat-label">Заказа</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon gradient-amber">
+               
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+              <div class="stat-content">
+                <span class="stat-number">785</span>
+                <span class="stat-label">Клиентов</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon gradient-purple">
+              
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                </svg>
+              </div>
+              <div class="stat-content">
+                <span class="stat-number">12</span>
+                <span class="stat-label">Поставщиков</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      
+        <section id="products" class="admin-section">
+          <div class="section-header">
+            <h3>Товары</h3>
+          
+            <button class="btn btn-add" id="addProductBtn">Добавить товар</button>
+          </div>
+          <div class="table-wrapper">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Название</th>
+                  <th>Категория</th>
+                  <th>Цена</th>
+                  <th>Наличие</th>
+                  <th>Действия</th>
+                </tr>
+              </thead>
+              <tbody>
+              
+                <tr>
+                  <td>1</td>
+                  <td>Chateau Margaux 2015</td>
+                  <td>Вино</td>
+                  <td>12 500 ₽</td>
+                  <td>23 шт.</td>
+                  <td class="actions">
+                    <button class="icon-btn-small edit" aria-label="Редактировать">
+                  
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20h9" />
+                        <path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
+                      </svg>
+                    </button>
+                    <button class="icon-btn-small delete" aria-label="Удалить">
+                  
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                        <path d="M10 11v6" />
+                        <path d="M14 11v6" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Пармезан Реджано 24 мес.</td>
+                  <td>Сыр</td>
+                  <td>8 900 ₽</td>
+                  <td>15 шт.</td>
+                  <td class="actions">
+                    <button class="icon-btn-small edit" aria-label="Редактировать">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20h9" />
+                        <path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
+                      </svg>
+                    </button>
+                    <button class="icon-btn-small delete" aria-label="Удалить">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                        <path d="M10 11v6" />
+                        <path d="M14 11v6" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Хамон Иберико</td>
+                  <td>Мясо</td>
+                  <td>45 000 ₽</td>
+                  <td>7 шт.</td>
+                  <td class="actions">
+                    <button class="icon-btn-small edit" aria-label="Редактировать">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20h9" />
+                        <path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
+                      </svg>
+                    </button>
+                    <button class="icon-btn-small delete" aria-label="Удалить">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                        <path d="M10 11v6" />
+                        <path d="M14 11v6" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+   
+        <section id="orders" class="admin-section">
+          <div class="section-header">
+            <h3>Заказы</h3>
+          
+          </div>
+          <div class="table-wrapper">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>№</th>
+                  <th>Клиент</th>
+                  <th>Дата</th>
+                  <th>Сумма</th>
+                  <th>Статус</th>
+                  <th>Действия</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1001</td>
+                  <td>Иван Петров</td>
+                  <td>12.11.2025</td>
+                  <td>18 900 ₽</td>
+                  <td><span class="badge status-delivered">Доставлено</span></td>
+                  <td class="actions">
+                    <button class="icon-btn-small edit" aria-label="Просмотреть">
+                  
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7S3.732 16.057 2.458 12z" />
+                      </svg>
+                    </button>
+                    <button class="icon-btn-small delete" aria-label="Удалить">
+                     
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                        <path d="M10 11v6" />
+                        <path d="M14 11v6" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1002</td>
+                  <td>Мария Сидорова</td>
+                  <td>10.11.2025</td>
+                  <td>9 500 ₽</td>
+                  <td><span class="badge status-processing">В обработке</span></td>
+                  <td class="actions">
+                    <button class="icon-btn-small edit" aria-label="Просмотреть">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7S3.732 16.057 2.458 12z" />
+                      </svg>
+                    </button>
+                    <button class="icon-btn-small delete" aria-label="Удалить">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                        <path d="M10 11v6" />
+                        <path d="M14 11v6" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1003</td>
+                  <td>Сергей Иванов</td>
+                  <td>08.11.2025</td>
+                  <td>6 200 ₽</td>
+                  <td><span class="badge status-shipped">Отправлено</span></td>
+                  <td class="actions">
+                    <button class="icon-btn-small edit" aria-label="Просмотреть">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7S3.732 16.057 2.458 12z" />
+                      </svg>
+                    </button>
+                    <button class="icon-btn-small delete" aria-label="Удалить">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                        <path d="M10 11v6" />
+                        <path d="M14 11v6" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+ 
+        <section id="users" class="admin-section">
+          <div class="section-header">
+            <h3>Пользователи</h3>
+          </div>
+          <div class="table-wrapper">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Имя</th>
+                  <th>Email</th>
+                  <th>Роль</th>
+                  <th>Статус</th>
+                  <th>Действия</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Admin</td>
+                  <td>admin@maison.ru</td>
+                  <td>Администратор</td>
+                  <td><span class="badge status-active">Активен</span></td>
+                  <td class="actions">
+                    <button class="icon-btn-small edit" aria-label="Редактировать">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20h9" />
+                        <path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
+                      </svg>
+                    </button>
+                    <button class="icon-btn-small delete" aria-label="Удалить">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                        <path d="M10 11v6" />
+                        <path d="M14 11v6" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Пользователь</td>
+                  <td>user@example.com</td>
+                  <td>Покупатель</td>
+                  <td><span class="badge status-blocked">Заблокирован</span></td>
+                  <td class="actions">
+                    <button class="icon-btn-small edit" aria-label="Редактировать">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20h9" />
+                        <path d="M16.5 3.5a2.121 2.121 0 1 1 3 3L7 19l-4 1 1-4 12.5-12.5z" />
+                      </svg>
+                    </button>
+                    <button class="icon-btn-small delete" aria-label="Удалить">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="3 6 5 6 21 6" />
+                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" />
+                        <path d="M10 11v6" />
+                        <path d="M14 11v6" />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+   
+    <script src="js/admin.js"></script>
+  </body>
+</html>

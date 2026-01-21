@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Личный кабинет — Maison Europa</title>
+    <meta
+      name="description"
+      content="Личный кабинет магазина Maison Europa. Управляйте личными данными, адресами доставки, заказами и настройками безопасности."
+    />
+   
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/global.css" />
+  </head>
+  <body>
+  
+    <div class="bg-decor">
+      <div class="circle circle-amber"></div>
+      <div class="circle circle-red"></div>
+    </div>
+
+   
+    <header class="site-header" id="siteHeader">
+      <div class="container header-wrapper">
+        <div class="header-left">
+          <a href="index.html" > <h1 class="site-title" id="homeLink">Maison Europa</h1></a>
+         
+          <span class="divider"></span>
+          <span class="page-title">Личный кабинет</span>
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-secondary" id="homeBtn">
+          
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+              <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            </svg>
+            <span class="btn-text">На главную</span>
+          </button>
+          <button class="btn btn-danger" id="logoutBtn">
+           
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M13 16l5-4-5-4"></path>
+              <path d="M2 21V3"></path>
+              <path d="M14 12H2"></path>
+            </svg>
+            <span class="btn-text">Выйти</span>
+            
+         
+            
+          </button>
+        </div>
+      </div>
+    </header>
+
+   
+    <main class="container profile-main">
+      <div class="profile-grid">
+        
+        <aside class="profile-sidebar" id="sidebar">
+          <div class="sidebar-card">
+          
+            <div class="avatar-section">
+              <div class="avatar">
+               
+                <svg class="icon user-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <h2 class="user-name" id="userNameDisplay">Иван Петров</h2>
+              <p class="user-email" id="userEmailDisplay">ivan.petrov@example.com</p>
+            </div>
+         
+            <nav class="tab-nav">
+              <button class="tab-btn active" data-tab="info">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <span>Личные данные</span>
+              </button>
+              <button class="tab-btn" data-tab="security">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="18" height="11" x="3" y="11" rx="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span>Безопасность</span>
+              </button>
+              <button class="tab-btn" data-tab="addresses">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 21s-6-5.33-6-9a6 6 0 0 1 12 0c0 3.67-6 9-6 9z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <span>Адреса доставки</span>
+              </button>
+              <button class="tab-btn" data-tab="orders">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                  <path d="M3 9l9 6 9-6"></path>
+                  <path d="M3 9v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V9"></path>
+                </svg>
+                <span>Мои заказы</span>
+              </button>
+            </nav>
+          </div>
+        </aside>
+
+       
+        <section class="profile-content" id="profileContent">
+     
+          <div class="tab-content active" id="infoTab">
+            <h2 class="section-title">Личные данные</h2>
+       
+            <div class="field-group">
+              <label class="field-label">Имя</label>
+              <div class="field-control" data-field="name">
+                <div class="field-display">
+                  <span id="nameValue">Иван Петров</span>
+                  <button class="icon-btn edit-btn" data-edit="name" aria-label="Редактировать имя">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 20h9"></path>
+                      <path d="M16.5 3.5l4 4L7 21H3v-4L16.5 3.5z"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="field-edit hidden">
+                  <input type="text" id="nameInput" value="Иван Петров" />
+                  <button class="icon-btn save-btn" data-save="name" aria-label="Сохранить имя">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4z"></path>
+                      <path d="M17 21V3"></path>
+                      <path d="M7 3v4h6"></path>
+                    </svg>
+                  </button>
+                  <button class="icon-btn cancel-btn" data-cancel="name" aria-label="Отменить редактирование">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 6L6 18"></path>
+                      <path d="M6 6l12 12"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+         
+            <div class="field-group">
+              <label class="field-label">Email</label>
+              <div class="field-control" data-field="email">
+                <div class="field-display">
+                  <span id="emailValue">ivan.petrov@example.com</span>
+                  <button class="icon-btn edit-btn" data-edit="email" aria-label="Редактировать email">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M12 20h9"></path>
+                      <path d="M16.5 3.5l4 4L7 21H3v-4L16.5 3.5z"></path>
+                    </svg>
+                  </button>
+                </div>
+                <div class="field-edit hidden">
+                  <input type="email" id="emailInput" value="ivan.petrov@example.com" />
+                  <button class="icon-btn save-btn" data-save="email" aria-label="Сохранить email">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-4-4z"></path>
+                      <path d="M17 21V3"></path>
+                      <path d="M7 3v4h6"></path>
+                    </svg>
+                  </button>
+                  <button class="icon-btn cancel-btn" data-cancel="email" aria-label="Отменить редактирование">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M18 6L6 18"></path>
+                      <path d="M6 6l12 12"></path>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+       
+          <div class="tab-content" id="securityTab">
+            <h2 class="section-title">Безопасность</h2>
+            <div id="passwordView" class="security-view">
+              <div class="password-info">
+                <h3>Пароль</h3>
+                <p>Последнее изменение: 15.10.2024</p>
+              </div>
+              <button class="btn btn-dark" id="changePasswordBtn">Изменить пароль</button>
+            </div>
+            <div id="passwordForm" class="security-form hidden">
+              <div class="form-group">
+                <label for="currentPassword">Текущий пароль</label>
+                <input type="password" id="currentPassword" placeholder="••••••••" />
+              </div>
+              <div class="form-group">
+                <label for="newPassword">Новый пароль</label>
+                <input type="password" id="newPassword" placeholder="••••••••" />
+              </div>
+              <div class="form-group">
+                <label for="confirmPassword">Подтвердите новый пароль</label>
+                <input type="password" id="confirmPassword" placeholder="••••••••" />
+              </div>
+              <div class="password-actions">
+                <button class="btn btn-dark" id="savePasswordBtn">Сохранить пароль</button>
+                <button class="btn btn-light" id="cancelPasswordBtn">Отмена</button>
+              </div>
+            </div>
+          </div>
+
+        
+          <div class="tab-content" id="addressesTab">
+            <div class="addresses-header">
+              <h2 class="section-title">Адреса доставки</h2>
+              <button class="btn btn-dark" id="toggleAddAddressBtn">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <span>Добавить адрес</span>
+              </button>
+            </div>
+           
+            <div class="add-address-form hidden" id="addAddressForm">
+              <div class="form-group">
+                <label for="addressTitle">Название адреса</label>
+                <input type="text" id="addressTitle" placeholder="Например: Дом, Офис" />
+              </div>
+              <div class="form-group">
+                <label for="addressFull">Полный адрес</label>
+                <textarea id="addressFull" rows="3" placeholder="Город, улица, дом, квартира"></textarea>
+              </div>
+              <div class="form-checkbox">
+                <input type="checkbox" id="addressDefault" />
+                <label for="addressDefault">Использовать как адрес по умолчанию</label>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-dark" id="saveAddressBtn">Сохранить адрес</button>
+                <button class="btn btn-light" id="cancelAddressBtn">Отмена</button>
+              </div>
+            </div>
+          
+            <div class="address-list" id="addressList">
+            
+            </div>
+          </div>
+
+       
+          <div class="tab-content" id="ordersTab">
+            <h2 class="section-title">Мои заказы</h2>
+            <div id="ordersContainer">
+              
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+
+    <nav class="mobile-nav">
+      <div class="mobile-nav-inner">
+        <a href="index.html" class="mobile-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+            <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          </svg>
+          <span>Главная</span>
+        </a>
+        <a href="katalog.html" class="mobile-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+            <path d="M3.103 6.034h17.794"></path>
+            <path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path>
+          </svg>
+          <span>Каталог</span>
+        </a>
+        <a href="sup.html" class="mobile-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M9.09 9a3 3 0 1 1 5.83 1c0 2-3 3-3 3"></path>
+            <path d="M12 17h.01"></path>
+          </svg>
+          <span>Поддержка</span>
+        </a>
+        <a href="cart.html" class="mobile-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="21" r="1"></circle>
+            <circle cx="19" cy="21" r="1"></circle>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+          </svg>
+          <span>Корзина</span>
+        </a>
+        <a href="Bxodandreg.html" class="mobile-item active">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>Вход</span>
+        </a>
+      </div>
+    </nav>
+
+  </body>
+</html>
