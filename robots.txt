@@ -1,9 +1,0 @@
-User-agent: *
-Disallow: /admin.html
-Disallow: /Bxodandreg.html
-Disallow: /profile.html
-Disallow: /cart.html
-Disallow: /check.html
-
-Sitemap: https://example.com/sitemap.xml
-Host: example.com
